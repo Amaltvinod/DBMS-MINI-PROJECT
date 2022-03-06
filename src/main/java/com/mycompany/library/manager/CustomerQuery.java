@@ -23,7 +23,7 @@ public class CustomerQuery {
         con=DriverManager.getConnection(url,user,pass); 
         }catch(Exception e) {
         	
-        	 
+        	
         	
         }
         
@@ -34,24 +34,24 @@ public class CustomerQuery {
         	String Query="select * from customeraccount where cname=? and cpass=?";
         	PreparedStatement ps=con.prepareStatement(Query);
         	ps.setString(1,c.getCname() );
-            ps.setString(2,c.getCpass());
-            ResultSet rs=ps.executeQuery();
-            if(rs.next()) {
-            	 flag=true;
-            }
+                ps.setString(2,c.getCpass());
+                ResultSet rs=ps.executeQuery();
+                if(rs.next()) {
+                    flag=true;
+                }
            
-        }catch(Exception e){
+            }catch(Exception e){
             
-        }
+            }
         return flag;
      
     }
      public static boolean CreateAccount(Customer c){
         boolean flag=false;
        try{
-    	   String Query="insert into customeraccount values(?,?)";
+    	   String Query="INSERT INTO customeraccount (cname,cpass) VALUES(?,?)";
        	   PreparedStatement ps=con.prepareStatement(Query);
-       	   ps.setString(1,c.getCname() );
+       	   ps.setString(1,c.getCname());
            ps.setString(2,c.getCpass());
            ps.executeUpdate();
            flag=true;

@@ -139,11 +139,15 @@ public class CustomerLogin extends javax.swing.JFrame {
         String cpass=PassText.getText();
         Customer c=new Customer(cuser,cpass);
         if(CustomerQuery.verifyAccount(c)){
-            dispose();
             JOptionPane.showMessageDialog(null,"login succesfull");
+            dispose();
+            UserLibrary ul=new UserLibrary();
+            ul.setVisible(true);
+          
+            
             
         }else{
-            JOptionPane.showMessageDialog(null,"login unsuccesfull");
+            JOptionPane.showMessageDialog(null,"login unsuccesfull Try Again!");
             
         }
     }//GEN-LAST:event_LoginButtonActionPerformed
