@@ -4,6 +4,10 @@
  */
 package com.mycompany.library.gui;
 import com.mycompany.library.manager.*;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 import javax.swing.JOptionPane;
 /**
  *

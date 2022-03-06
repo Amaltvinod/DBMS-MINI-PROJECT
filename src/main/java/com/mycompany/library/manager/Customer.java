@@ -13,40 +13,44 @@ public class Customer {
     private String cpass;
     private String bookname;
     public Customer(String cname,String cpass){
-        this.cname=cname;
-        this.cpass=cpass;
+       setCname(cname);
+       setCpass(cpass);
+       
+       
     }
-    public void setBookName(String bookname){
-        this.bookname=bookname;
-        
-    }
-    
-    public String getBookName(){
-        return this.bookname;
-    }
-    public void setcName(String cname){
-        this.cname=cname;
-        
-    }
-    
-    public String getcName(){
-        return this.cname;
-    }
-    public void setPass(String cpass){
-        this.cpass=cpass;
-        
-    }
-    public String getpass(){
-        return cpass;
-    }
-    
-    /**
+   
+    public String getCname() {
+		return cname;
+	}
+
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+
+	public String getCpass() {
+		return cpass;
+	}
+
+	public void setCpass(String cpass) {
+		this.cpass = cpass;
+	}
+
+	public String getBookname() {
+		return bookname;
+	}
+
+	public void setBookname(String bookname) {
+		this.bookname = bookname;
+	}
+
+	/**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
         CustomerLogin cl=new CustomerLogin();
         cl.setVisible(true);
+        
         
         
        

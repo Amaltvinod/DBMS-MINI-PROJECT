@@ -113,10 +113,7 @@ public class CreateAccount extends javax.swing.JFrame {
         // TODO add your handling code here:
         String cuser=UserText.getText();
         String cpass=PassText.getText();
-        c.setcName(cuser);
-        System.out.println(c.getcName());
-        c.setPass(cpass);
-        
+        Customer c=new Customer(cuser,cpass);
         if(CustomerQuery.CreateAccount(c)){
             dispose();
             JOptionPane.showMessageDialog(null,"Account Created Sucessfully");
